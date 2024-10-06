@@ -1,0 +1,39 @@
+{
+    "films": [
+        {
+            "id": 1,
+            "title": "Liga da Justiça - SnyderCut",
+            "director": "Zack Snyder",
+            "genres": "Ação",
+            "year": "2021"
+        },
+        {
+            "id": 2,
+            "title": "Godzilla vs. Kong",
+            "director": "Adam Wingard",
+            "genres": "Ação",
+            "year": "2021"
+        },
+        {
+            "id": 3,
+            "title": "WandaVision",
+            "director": "Jac Schaeffer",
+            "genres": "Comédia",
+            "year":"2021"
+        },
+        {
+            "id": 4,
+            "title": "Stranger Things",
+            "director": "Matt Duffer e Ross Duffer",
+            "genres": "Fantasia",
+            "year": "2016"
+        },
+        {
+            "id": 5,
+            "title": "Lucifer",
+            "director": "Tom Kapinos",
+            "genres": "Drama",
+            "year": "2016"            
+        }
+    ]
+}
