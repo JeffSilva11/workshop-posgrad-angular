@@ -1,0 +1,15 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .footer > span {
+    font-size: 0.8rem !important;
+  }
+  
+  .footer > span i {
+    font-size: 1.1rem !important;
+  }
+  
