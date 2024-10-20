@@ -9,17 +9,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 // Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NavigationComponent } from './components/template/navigation/navigation.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // Views
 import { HomeComponent } from './views/home/home.component';
 import { MoviesComponent } from './views/movies/movies.component';
 import { SeriesComponent } from './views/series/series.component';
+import { MovieCreateComponent } from './components/movie/movie-create/movie-create.component';
+import { SerieCreateComponent } from './components/serie/serie-create/serie-create.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { SeriesComponent } from './views/series/series.component';
     NavigationComponent,
     HomeComponent,
     MoviesComponent,
-    SeriesComponent
+    SeriesComponent,
+    MovieCreateComponent,
+    SerieCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +45,9 @@ import { SeriesComponent } from './views/series/series.component';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
