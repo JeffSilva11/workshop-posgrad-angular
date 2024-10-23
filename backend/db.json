@@ -20,8 +20,23 @@
       "year": "2021",
       "genres": "Comédia",
       "id": 3
+    },
+    {
+      "title": "Falcão e o Soldado Invernal",
+      "director": "Anthony Mackie, Sebastian Stan, Wyatt Russell",
+      "year": "2021",
+      "genres": "Aventura",
+      "id": 4
+    },
+    {
+      "title": "Vingadores: Ultimato",
+      "director": "Anthony Russo, Joe Russo",
+      "year": "2019",
+      "genres": "Action, Adventure, Drama",
+      "id": 5
     }
   ],
+
   "series": [
     {
       "id": 1,
