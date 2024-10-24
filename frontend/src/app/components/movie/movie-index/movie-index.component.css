@@ -1,0 +1,17 @@
+  .table {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .action {
+    margin-right: 10px;
+    color: black;
+  }  
+
+  .edit > i {
+    color: rgb(46, 46, 230);
+  }
+  
+  .delete > i {
+    color: rgb(223, 62, 62);
+  }

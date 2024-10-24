@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
+import { MatTableModule } from "@angular/material/table";
 
 // Components
 import { AppComponent } from './app.component';
@@ -29,6 +30,7 @@ import { MoviesComponent } from './views/movies/movies.component';
 import { SeriesComponent } from './views/series/series.component';
 import { MovieCreateComponent } from './components/movie/movie-create/movie-create.component';
 import { SerieCreateComponent } from './components/serie/serie-create/serie-create.component';
+import { MovieIndexComponent } from './components/movie/movie-index/movie-index.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import { SerieCreateComponent } from './components/serie/serie-create/serie-crea
     MoviesComponent,
     SeriesComponent,
     MovieCreateComponent,
-    SerieCreateComponent
+    SerieCreateComponent,
+    MovieIndexComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +60,8 @@ import { SerieCreateComponent } from './components/serie/serie-create/serie-crea
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

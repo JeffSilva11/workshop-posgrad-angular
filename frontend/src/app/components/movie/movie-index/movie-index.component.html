@@ -1,0 +1,48 @@
+<table mat-table [dataSource]="movies" class="table mat-elevation-z8">
+
+    <!-- ID Colum -->
+    <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> Id </th>
+        <td mat-cell *matCellDef="let movie"> {{movie.id}} </td>
+    </ng-container>
+
+    <!-- title Colum -->
+    <ng-container matColumnDef="title">
+        <th mat-header-cell *matHeaderCellDef> Título </th>
+        <td mat-cell *matCellDef="let movie"> {{movie.title}} </td>
+    </ng-container>
+
+    <!-- director Colum -->
+    <ng-container matColumnDef="director">
+        <th mat-header-cell *matHeaderCellDef> Diretor(es) </th>
+        <td mat-cell *matCellDef="let movie"> {{movie.director}} </td>
+    </ng-container>
+
+    <!-- genres Colum -->
+    <ng-container matColumnDef="genres">
+        <th mat-header-cell *matHeaderCellDef> Gênero(s) </th>
+        <td mat-cell *matCellDef="let movie"> {{movie.genres}} </td>
+    </ng-container>
+
+    <!-- year Colum -->
+    <ng-container matColumnDef="year">
+        <th mat-header-cell *matHeaderCellDef> Ano </th>
+        <td mat-cell *matCellDef="let movie"> {{movie.year}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Ações </th>
+        <td mat-cell *matCellDef="let movie">
+            <a routerLink="/" class="action edit">
+                <i class="material-icons">edit</i>
+            </a>
+            <a routerLink="/" class="action delete">
+                <i class="material-icons">delete</i>
+            </a>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
