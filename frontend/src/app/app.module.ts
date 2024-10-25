@@ -31,6 +31,8 @@ import { SeriesComponent } from './views/series/series.component';
 import { MovieCreateComponent } from './components/movie/movie-create/movie-create.component';
 import { SerieCreateComponent } from './components/serie/serie-create/serie-create.component';
 import { MovieIndexComponent } from './components/movie/movie-index/movie-index.component';
+import { MovieUpdateComponent } from './components/movie/movie-update/movie-update.component';
+import { MovieDeleteComponent } from './components/movie/movie-delete/movie-delete.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { MovieIndexComponent } from './components/movie/movie-index/movie-index.
     SeriesComponent,
     MovieCreateComponent,
     SerieCreateComponent,
-    MovieIndexComponent
+    MovieIndexComponent,
+    MovieUpdateComponent,
+    MovieDeleteComponent
   ],
   imports: [
     BrowserModule,

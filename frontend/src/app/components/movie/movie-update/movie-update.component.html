@@ -1,0 +1,26 @@
+<mat-card class="card-home mat-elevation-z3">
+    <mat-card-title class="card-title">Editar Filme</mat-card-title>
+  
+    <form>
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Título do Filme" name="title" [(ngModel)]="movie.title">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Diretor(es) do Filme" name="director" [(ngModel)]="movie.director">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Gênero do Filme" name="genres" [(ngModel)]="movie.genres">
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill">
+        <input matInput placeholder="Ano de Lançamento do Filme" name="year" [(ngModel)]="movie.year">
+      </mat-form-field>
+    </form>
+  
+    <div>
+      <button mat-flat-button color="primary" (click)="updateMovie()">Atualizar</button>
+      <button mat-flat-button color="warn" (click)="cancel()">Cancelar</button>
+    </div>
+  </mat-card>

@@ -18,4 +18,18 @@ export class MovieService {
   index(): Observable<Movie[]> {
     return this.http.get<Movie[]>(`${API}/movies`);
   }
+
+  getById(id: string): Observable<Movie> {
+    return this.http.get<Movie>(`${API}/movies/${id}`);
+  }
+
+  update(movie: Movie): Observable<Movie> {
+    const uri = `${API}/movies/${movie.id}`;
+    return this.http.put<Movie>(uri, movie);
+  }
+
+  delete(id: number): Observable<Movie> {
+    const uri = `${API}/movies/${id}`;
+    return this.http.delete<Movie>(uri);
+  }
 }

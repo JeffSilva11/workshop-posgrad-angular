@@ -15,13 +15,6 @@
       "year": "2021"
     },
     {
-      "title": "Nome do Filme",
-      "director": "Nome do Diretor",
-      "year": "2021",
-      "genres": "Comédia",
-      "id": 3
-    },
-    {
       "title": "Falcão e o Soldado Invernal",
       "director": "Anthony Mackie, Sebastian Stan, Wyatt Russell",
       "year": "2021",
@@ -36,7 +29,6 @@
       "id": 5
     }
   ],
-
   "series": [
     {
       "id": 1,
