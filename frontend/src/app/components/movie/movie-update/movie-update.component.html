@@ -1,26 +1,42 @@
 <mat-card class="card-home mat-elevation-z3">
     <mat-card-title class="card-title">Editar Filme</mat-card-title>
   
-    <form>
+    <form [formGroup]="updateForm" (ngSubmit)="updateMovie()">
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Título do Filme" name="title" [(ngModel)]="movie.title">
+        <input matInput placeholder="Título do Filme" formControlName="title">
+        <mat-error *ngIf="updateForm.get('title').errors && updateForm.get('title').hasError('required')">
+          O campo <strong>título</strong> é obrigatório!
+        </mat-error>
+        <mat-error *ngIf="updateForm.get('title').errors && updateForm.get('title').hasError('minlength')">
+          O campo <strong>título</strong> deve ser maior que {{updateForm.get('title').errors.minlength.requiredLength}} caracteres!
+        </mat-error>
       </mat-form-field>
-  
+    
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Diretor(es) do Filme" name="director" [(ngModel)]="movie.director">
+        <input matInput placeholder="Diretor(es) do Filme" formControlName="director">
+        <mat-error *ngIf="updateForm.get('director').errors && updateForm.get('director').hasError('required')">
+          O campo <strong>Diretor</strong> é obrigatório!
+        </mat-error>
       </mat-form-field>
-  
+    
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Gênero do Filme" name="genres" [(ngModel)]="movie.genres">
+        <input matInput placeholder="Genero do Filme" formControlName="genres">
+        <mat-error *ngIf="updateForm.get('genres').errors && updateForm.get('genres').hasError('required')">
+          O campo <strong>Genero</strong> é obrigatório!
+        </mat-error>
       </mat-form-field>
-  
+    
       <mat-form-field appearance="fill">
-        <input matInput placeholder="Ano de Lançamento do Filme" name="year" [(ngModel)]="movie.year">
+        <input matInput placeholder="Ano de Lançamento do Filme" formControlName="year">
+        <mat-error *ngIf="updateForm.get('year').errors && updateForm.get('year').hasError('required')">
+          O campo <strong>Ano</strong> é obrigatório!
+        </mat-error>
       </mat-form-field>
+    
+      <div>
+        <button mat-flat-button color="primary" type="submit" [disabled]="!updateForm.valid">Atualizar</button>
+        <button mat-flat-button color="warn" (click)="cancel()">Cancelar</button>
+      </div>
     </form>
-  
-    <div>
-      <button mat-flat-button color="primary" (click)="updateMovie()">Atualizar</button>
-      <button mat-flat-button color="warn" (click)="cancel()">Cancelar</button>
-    </div>
+
   </mat-card>

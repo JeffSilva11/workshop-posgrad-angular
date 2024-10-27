@@ -17,3 +17,16 @@ html, body {
     vertical-align: middle;
   }
   
+  .snack-message-success {
+    background-color: #000;
+    color: #FFF;
+  }
+  
+  .snack-message-error {
+    background-color: #f33d3d;
+    color: #FFF;
+  }
+  
+  .snack-message-error button {
+    background-color: #ffffffe6;
+  }

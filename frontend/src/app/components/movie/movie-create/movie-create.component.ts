@@ -3,6 +3,7 @@ import { MovieService } from './../movie.service';
 import { SharedService } from '../../shared/shared.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-movie-create',
@@ -14,22 +15,43 @@ export class MovieCreateComponent implements OnInit {
   movie: Movie = {
     title: "",
     director: "",
-    year: "",
     genres: "",
+    year: "",
   };
 
   constructor(
     private router: Router, 
     private movieService: MovieService, 
-    private sharedService: SharedService) {}
+    private sharedService: SharedService,
+    private fb: FormBuilder
+  ) {}
 
-  ngOnInit(): void {}
+  createForm: FormGroup;
+
+  ngOnInit() {
+  this.createForm = this.fb.group({
+    title: ["", [Validators.required, Validators.minLength(5)]],
+    director: ["", [Validators.required]],
+    genres: ["", [Validators.required]],
+    year: ["", [Validators.required]],  
+  });
+
+  // this.createForm = new FormGroup({
+  // title: new FormControl("", [Validators.required])
+  // });
+  }
+
+  errorHandlingForm = (control: string, error: string) => {
+    return this.createForm.controls[control].hasError(error);
+  };
   
-  createMovie(): void {    
-    this.movieService.create(this.movie).subscribe(() => {
-      this.sharedService.showMessage('Filme Adicionado com sucesso!');
-      this.router.navigate(['/movies']);
-    });
+  createMovie(): void {
+    if (this.createForm.valid) {
+      this.movieService.create(this.createForm.value).subscribe(() => {
+        this.sharedService.showMessage("Filme Adicionado com sucesso!");
+        this.router.navigate(['/movies']);
+      });      
+    }
   }
 
   cancel() {
