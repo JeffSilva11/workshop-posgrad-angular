@@ -1,11 +1,11 @@
 {
   "movies": [
     {
-      "id": 1,
       "title": "Liga da Justiça - SnyderCut",
       "director": "Zack Snyder",
       "genres": "Ação",
-      "year": "2021"
+      "year": "2024",
+      "id": 1
     },
     {
       "id": 2,
@@ -29,10 +29,10 @@
       "id": 5
     },
     {
-      "title": "filme 1",
+      "title": "filme1",
       "director": "diretor1",
       "genres": "genero1",
-      "year": "2022",
+      "year": "4444",
       "id": 6
     }
   ],
